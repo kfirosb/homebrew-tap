@@ -1,7 +1,7 @@
 cask "gloss" do
-  version "0.18.0"
-  sha256 arm:   "fd38dd154bc3f68c288cce4afc38a291570aa18b0c40d3f02684fa516514472c",
-         intel: "3bc6fb9139530ed1b4a7e364380823b526d4342dcc0f339d6490cbb413bdd9b3"
+  version "0.19.0"
+  sha256 arm:   "f11db66a8da0b65a5a7781ed1e5fa7588eea0aca1048565202ff1b3b05f55c10",
+         intel: "7718c0b6ec7e826035aa6c179e7731ec78583f18fa538b84fd8ed6c73c573e34"
 
   arch arm: "arm64", intel: "x64"
   url "https://github.com/kfirosb/gloss/releases/download/v#{version}/Gloss-#{version}-#{arch}.dmg"
@@ -21,14 +21,12 @@ cask "gloss" do
   zap trash: [
     "~/.language-assistant",
     "~/Library/Application Support/language-assistant",
-    "~/Library/Preferences/local.language-assistant.plist",
-    "~/Library/Saved Application State/local.language-assistant.savedState",
+    "~/Library/Preferences/io.github.kfirosb.gloss.plist",
+    "~/Library/Saved Application State/io.github.kfirosb.gloss.savedState",
   ]
 
   caveats <<~EOS
-    Gloss is ad-hoc signed and not notarized. On first launch macOS says it
-    cannot verify the app: choose Done, then System Settings > Privacy &
-    Security > Open Anyway. Gloss needs Codex or Claude Code signed in, and
-    ripgrep (brew install ripgrep) for file search.
+    Gloss needs Codex or Claude Code signed in, and ripgrep
+    (brew install ripgrep) for file search.
   EOS
 end
