@@ -1,13 +1,13 @@
 cask "gloss" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.20.0"
-  sha256 arm:   "ac12f67de783d5b27b99de28c181a6826dffe17826413e5db7c72bd828a0d911",
-         intel: "910ad4e480a3b395b6694b517f10c2da41b07be6730a8045cb910c981948705a"
+  version "0.21.0"
+  sha256 arm:   "5bff8743a946e5e405912a5f46812f15ad053483de476f4828f270840d907822",
+         intel: "ea1f9fec8d5837cb29c1ccf2d7770607787f68098367a1ae40fcc17bce20a2aa"
 
   url "https://github.com/kfirosb/gloss/releases/download/v#{version}/Gloss-#{version}-#{arch}.dmg"
   name "Gloss"
-  desc "Talk to Claude Code and Codex in Hebrew or any language from your terminal"
+  desc "Translate Claude Code and Codex conversations into your language"
   homepage "https://github.com/kfirosb/gloss"
 
   livecheck do
