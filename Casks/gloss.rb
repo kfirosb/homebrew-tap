@@ -1,9 +1,9 @@
 cask "gloss" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.22.0"
-  sha256 arm:   "54a06b94cbc53cd1fb924739ecb62dcd8c6fa34011262e5f6afac8c397e39c8b",
-         intel: "9808f1d9f75714a61123caef8ce7676d6e1ad1219c9791a864e68c2f0d3ae81e"
+  version "0.23.0"
+  sha256 arm:   "808fae4a6b458ff6cd6f44d534ae67a8588dd131d62c4c2c7fc004a39cd524c4",
+         intel: "5c4ab515c7cf7e6d574930f0fb3e2eb9f7039936d17c2a72185649687fe78bb1"
 
   url "https://github.com/kfirosb/gloss/releases/download/v#{version}/Gloss-#{version}-#{arch}.dmg"
   name "Gloss"
@@ -20,6 +20,8 @@ cask "gloss" do
   app "Gloss.app"
 
   zap trash: [
+    "~/.gloss",
+    "~/Library/Application Support/Gloss",
     "~/.language-assistant",
     "~/Library/Application Support/language-assistant",
     "~/Library/Preferences/io.github.kfirosb.gloss.plist",
