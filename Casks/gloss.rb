@@ -1,9 +1,9 @@
 cask "gloss" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.24.0"
-  sha256 arm:   "e817465f16d447823c25fa5979ff702bdd5a0c253af873d04a818213594bbd87",
-         intel: "46332414bb8b6587db8deed2fd90e72cd2ca3aac9c70bbd1aef7c842a0dc9279"
+  version "0.25.0"
+  sha256 arm:   "80035890820a1449b93f40df24a880d7c4d849ce1bbcc641626c67ad7af2e389",
+         intel: "557dc2edf49b294d131588f973bd31f8c4772d4c0b7c4da09b5c19bd8730351f"
 
   url "https://github.com/kfirosb/gloss/releases/download/v#{version}/Gloss-#{version}-#{arch}.dmg"
   name "Gloss"
